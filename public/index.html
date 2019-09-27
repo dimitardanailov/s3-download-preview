@@ -4,9 +4,15 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <title>Amazon S3 download and preview example</title>
+  <meta name="description" content="Amazon S3 download and preview example">
+  <meta name="author" content="Danailov Consulting">
+
+	<style>
+		.block {
+			display: block;
+		}
+	</style>
 
 </head>
 
@@ -15,27 +21,26 @@
 		Amazon S3 objects have an additional meta Content-Disposition. Content-Disposition to attachment 
 	</code>
 	
-	<div>
+	<h3>Image:</h3>
+
+	<section>
 		<a href="https://download-example.s3.eu-central-1.amazonaws.com/IMG_2101.jpg">
 			Download	
-		</a>	
-	</div>
-	
-	<div>
+		</a>
+		<div>If you want to image preview, please click on the image.</div>
 		<img width="300" 
-			   src="https://download-example.s3.eu-central-1.amazonaws.com/IMG_2101-min.jpg" />
-	</div>
+				 src="https://download-example.s3.eu-central-1.amazonaws.com/IMG_2101-min.jpg" />
+	</section>
 
-	<div>
-		<a href="https://download-example.s3.eu-central-1.amazonaws.com/download.mov" download="download">
-			Download	
-		</a>	
-	</div>
+	<h3>Video:</h3>
 
-	<div>
+	<section>
+		<a class="block" href="https://download-example.s3.eu-central-1.amazonaws.com/download.mov">
+			Download
+		</a>
 		<video src="https://download-example.s3.eu-central-1.amazonaws.com/download.mov" 
 					 width="300" preload controls></video>
-	</div>
+	</section>
 
 	<script>
 		window.onload = () => {
