@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+</head>
+
+<body>
+	<code>
+		Amazon S3 objects have an additional meta Content-Disposition. Content-Disposition to attachment 
+	</code>
+	
+	<div>
+		<a href="https://download-example.s3.eu-central-1.amazonaws.com/IMG_2101.jpg">
+			Download	
+		</a>	
+	</div>
+	
+	<div>
+		<img width="300" 
+			   src="https://download-example.s3.eu-central-1.amazonaws.com/IMG_2101-min.jpg" />
+	</div>
+
+	<div>
+		<a href="https://download-example.s3.eu-central-1.amazonaws.com/download.mov" download="download">
+			Download	
+		</a>	
+	</div>
+
+	<div>
+		<video src="https://download-example.s3.eu-central-1.amazonaws.com/download.mov" 
+					 width="300" preload controls></video>
+	</div>
+
+	<script>
+		window.onload = () => {
+			const image = document.getElementsByTagName('img')[0]
+			image.addEventListener('click', e => {
+				window.open(e.target.src)
+			})
+		}
+	</script>
+</body>
+</html>
